@@ -26,7 +26,7 @@
     <meta name="twitter:description" content="{{ if .IsHome }}{{ $.Site.Params.description }}{{ else }}{{ .Params.Description }}{{ end }}" />
     <meta name="twitter:site" content="{{ $.Site.BaseURL }}" />
     <meta name="twitter:creator" content="{{ .Params.Author }}" />
-    <meta name="twitter:image" content="{{ if .IsHome }}{{ $.Site.Params.OGP | absURL }}{{ else }}{{ .Params.Cover | absURL }}{{ end }}">
+    <meta name="twitter:image" content="{{ if .IsHome }}{{ $.Site.Params.Opg | absURL }}{{ else }}{{ .Params.Cover | absURL }}{{ end }}">
 
     <!-- OGP -->
     <meta property="og:url" content="{{ .Permalink | absURL }}"/>
@@ -35,7 +35,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="{{ .Site.Title }}" />
     <meta property="og:description" content="{{ .Site.Params.Description }}"/>
-    <meta property="og:image" content="{{ $.Site.Params.OGP }}"/>
+    <meta property="og:image" content="{{ $.Site.Params.Opg }}"/>
     {{- else }}
     <meta property="og:type" content="article" />
     <meta property="og:title" content="{{ .Title }}" />
