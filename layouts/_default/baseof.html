@@ -9,6 +9,16 @@
   {{ partial "header" . }}
   {{ block "content" . }}{{ end }}
   {{ partial "footer.html" . }}
+  
+  {{ if $.IsPage }}
+  <!-- Pop up the image in the article -->
+  <script src="{{ "js/lightbox-plus-jquery.min.js" | absURL }}"></script>
+  <script>
+    lightbox.option({
+      'disableScrolling': true
+    })
+  </script>
+  {{ end }}
 </body>
 
 </html>
